@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wander.ph – Travel Agency</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">APIN</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Destinations</a>
+    <a href="#">Packages</a>
+    <a href="#">Blog</a>
+    <a href="#">About</a>
+  </nav>
+  <button class="btn primary">Book Now</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>WANDER <span>PH</span></h1>
+    <p>Luxury travel experiences crafted just for you.</p>
+    <div class="hero-buttons">
+      <button class="btn primary">Plan Your Trip</button>
+      <button class="btn outline">Explore</button>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Controls -->
+    <button class="arrow left" aria-label="Previous slide" onclick="prevSlide()">❮</button>
+    <button class="arrow right" aria-label="Next slide" onclick="nextSlide()">❯</button>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active" onclick="goSlide(0)"></span>
+      <span class="dot" onclick="goSlide(1)"></span>
+      <span class="dot" onclick="goSlide(2)"></span>
+    </div>
+  </div>
+</section>
+<!-- SLIDER -->
+<section class="slider-section">
+  <div class="slider-header">
+    <h2>Popular Experiences</h2>
+    <p>Hand-picked journeys loved by travelers</p>
+  </div>
+
+  <div class="slider" aria-label="Popular travel experiences slider">
+    <div class="slides">
+
+      <article class="slide">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Paradise">
+        <div class="slide-overlay">
+          <h3>Beach Paradise</h3>
+          <p>Relax on crystal clear beaches</p>
+          <button class="slide-btn">Explore</button>
+        </div>
+      </article>
+
+      <article class="slide">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain Escape">
+        <div class="slide-overlay">
+          <h3>Mountain Escape</h3>
+          <p>Adventure in the hills</p>
+          <button class="slide-btn">Explore</button>
+        </div>
+      </article>
+
+      <article class="slide">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Tropical Island">
+        <div class="slide-overlay">
+          <h3>Tropical Island</h3>
+          <p>Explore hidden islands</p>
+          <button class="slide-btn">Explore</button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="arrow left" aria-label="Previous slide" onclick="prevSlide()">❮</button>
+    <button class="arrow right" aria-label="Next slide" onclick="nextSlide()">❯</button>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active" onclick="goSlide(0)"></span>
+      <span class="dot" onclick="goSlide(1)"></span>
+      <span class="dot" onclick="goSlide(2)"></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- DESTINATIONS -->
+<section class="destinations">
+  <h2>Top Destinations</h2>
+  <div class="cards">
+
+    <div class="card">
+      <span class="badge">TOP</span>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <div class="card-overlay">
+        <h4 class="place-name">El Nido</h4>
+        <button class="card-btn" onclick="openBooking('El Nido')">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="badge">TOP</span>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <div class="card-overlay">
+        <h4 class="place-name">Baguio City</h4>
+        <button class="card-btn" onclick="openBooking('Baguio City')">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="badge">TOP</span>
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <div class="card-overlay">
+        <h4 class="place-name">Siargao</h4>
+        <button class="card-btn" onclick="openBooking('Siargao')">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="badge">TOP</span>
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090">
+      <div class="card-overlay">
+        <h4 class="place-name">Vigan</h4>
+        <button class="card-btn" onclick="openBooking('Vigan')">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="bookingModal">
+  <div class="modal-box">
+    <h3 id="placeName"></h3>
+    <input type="text" placeholder="Your Name">
+    <input type="date">
+    <button class="btn primary">Confirm Booking</button>
+    <button class="btn close" onclick="closeBooking()">Cancel</button>
+  </div>
+</div>
+
+<footer>© 2025 Wander.ph | All Rights Reserved</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
